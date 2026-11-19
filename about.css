@@ -1,0 +1,529 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    color: #071b49;
+    overflow-x: hidden;
+}
+
+img {
+    width: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+:root {
+    --navy: #061a49;
+    --blue: #087cf5;
+    --light-blue: #eaf2ff;
+    --white: #ffffff;
+}
+
+
+/* =========================
+   HERO SECTION
+========================= */
+
+.abouthero {
+    position: relative;
+    min-height: 620px;
+    background: var(--navy);
+    overflow: hidden;
+    color: white;
+}
+
+.hero-background {
+    position: absolute;
+    inset: 0;
+   /* background:
+        radial-gradient(circle at 55% 40%, #123d83 0%, transparent 45%),
+        linear-gradient(110deg, #041331, #082b66);*/
+    background: linear-gradient(to right, #15173f, #160382);
+
+}
+
+.hero-container {
+    position: relative;
+    z-index: 2;
+    width: 90%;
+    max-width: 1400px;
+    min-height: 620px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 3rem;
+}
+
+.herotext {
+    padding: 5rem 0;
+    max-width: 600px;
+}
+
+.section-label {
+    display: inline-block;
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    color: var(--blue);
+    margin-bottom: 22px;
+}
+
+.herotext h1 {
+    font-size: clamp(2.8rem, 5vw, 4.8rem);
+    font-weight: 800;
+    line-height: 1.05;
+    margin-bottom: 25px;
+}
+
+.herotext h1 span {
+    display: block;
+    color: #2495ff;
+}
+
+.herotext h2 {
+    font-size: clamp(1.3rem, 2.3vw, 2rem);
+    line-height: 1.4;
+    margin-bottom: 20px;
+}
+
+.herotext p {
+    color: #dce8ff;
+    line-height: 1.9;
+    font-size: 16px;
+    max-width: 520px;
+    margin-bottom: 30px;
+}
+
+.hero-btn,
+.cta-btn {
+    display: inline-block;
+    text-decoration: none;
+    background: var(--blue);
+    color: white;
+    padding: 16px 30px;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: 700;
+    transition: 0.3s;
+}
+
+.hero-btn:hover,
+.cta-btn:hover {
+    background: #ffffff;
+    color: var(--navy);
+    transform: translateY(-3px);
+}
+
+.hero-image {
+    height: 520px;
+    align-self: end;
+}
+
+.hero-image img {
+    height: 100%;
+    object-position: center top;
+    border-radius: 180px 180px 0 0;
+    object-fit: cover;
+}
+
+.hero-shape {
+    position: absolute;
+    bottom: -65px;
+    left: -5%;
+    width: 110%;
+    height: 110px;
+    background: white;
+    border-radius: 50% 50% 0 0;
+}
+
+
+/* =========================
+   OUR STORY
+========================= */
+
+.story-section {
+    padding: 100px 0;
+    background: white;
+}
+
+.story-container {
+    width: 90%;
+    max-width: 1300px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1.1fr;
+    gap: 6rem;
+    align-items: center;
+}
+
+.story-image {
+    height: 390px;
+    overflow: hidden;
+    border-radius: 20px;
+}
+
+.story-image img {
+    height: 100%;
+    transition: transform 0.5s;
+}
+
+.story-image:hover img {
+    transform: scale(1.05);
+}
+
+.story-content h2,
+.choose-content h2 {
+    font-size: clamp(2rem, 3vw, 2.7rem);
+    line-height: 1.25;
+    margin-bottom: 25px;
+}
+
+.story-content p,
+.choose-content p {
+    font-size: 15px;
+    line-height: 1.9;
+    color: #53627d;
+    margin-bottom: 18px;
+}
+
+
+/* =========================
+   MISSION AND VISION
+========================= */
+
+.mission-section {
+    padding: 80px 0;
+    background: var(--light-blue);
+}
+
+.mission-container {
+    width: 90%;
+    max-width: 1400px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 3rem;
+}
+
+.mission-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+
+.mission-box {
+    padding: 15px 25px;
+}
+
+.mission-box + .mission-box {
+    border-left: 2px solid #1686ff;
+}
+
+.mission-box h2 {
+    font-size: 21px;
+    line-height: 1.4;
+    margin-bottom: 18px;
+}
+
+.mission-box p {
+    font-size: 14px;
+    color: #53627d;
+    line-height: 1.9;
+}
+
+.mission-image {
+    height: 350px;
+    overflow: hidden;
+    border-radius: 20px;
+}
+
+.mission-image img {
+    height: 100%;
+}
+
+
+/* =========================
+   WHY CHOOSE US
+========================= */
+
+.choose-section {
+    padding: 100px 0;
+    background: white;
+}
+
+.choose-container {
+    width: 90%;
+    max-width: 1300px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+.choose-image {
+    height: 450px;
+    overflow: hidden;
+    border-radius: 20px 100px 20px 20px;
+}
+
+.choose-image img {
+    height: 100%;
+}
+
+.choose-points {
+    margin-top: 30px;
+    display: grid;
+    gap: 22px;
+}
+
+.choose-points div {
+    border-left: 3px solid var(--blue);
+    padding-left: 18px;
+}
+
+.choose-points h3 {
+    font-size: 17px;
+    margin-bottom: 7px;
+}
+
+.choose-points p {
+    margin: 0;
+    font-size: 14px;
+}
+
+
+/* =========================
+   CALL TO ACTION
+========================= */
+
+.about-cta {
+    width: 90%;
+    max-width: 1400px;
+    min-height: 300px;
+    margin: 20px auto 70px;
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    align-items: center;
+    background: linear-gradient(110deg, #041331, #0754b6);
+    border-radius: 20px;
+    overflow: hidden;
+    color: white;
+}
+
+.cta-content {
+    padding: 55px;
+}
+
+.cta-content span {
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    color: #54aaff;
+}
+
+.cta-content h2 {
+    font-size: clamp(1.8rem, 3vw, 2.7rem);
+    line-height: 1.3;
+    margin: 20px 0;
+}
+
+.cta-content p {
+    color: #dce8ff;
+    line-height: 1.8;
+    margin-bottom: 25px;
+}
+
+.cta-image {
+    height: 100%;
+    min-height: 300px;
+}
+
+.cta-image img {
+    height: 100%;
+}
+
+
+/* =========================
+   TABLET RESPONSIVENESS
+========================= */
+
+@media (max-width: 900px) {
+
+    .hero-container {
+        gap: 2rem;
+    }
+
+    .hero-image {
+        height: 420px;
+    }
+
+    .story-container,
+    .choose-container {
+        gap: 2rem;
+    }
+
+    .mission-container {
+        grid-template-columns: 1fr;
+    }
+
+    .mission-image {
+        height: 350px;
+    }
+
+    .about-cta {
+        grid-template-columns: 1fr 0.8fr;
+    }
+
+    .cta-content {
+        padding: 35px;
+    }
+}
+
+
+/* =========================
+   MOBILE RESPONSIVENESS
+========================= */
+
+@media (max-width: 650px) {
+
+    .abouthero {
+        min-height: auto;
+    }
+
+    .hero-container {
+        width: 88%;
+        grid-template-columns: 1fr;
+        gap: 0;
+        padding-top: 55px;
+    }
+
+    .herotext {
+        padding: 20px 0 35px;
+    }
+
+    .herotext h1 {
+        font-size: 2.8rem;
+    }
+
+    .herotext p {
+        font-size: 14px;
+    }
+
+    .hero-image {
+        height: 400px;
+        width: 100%;
+    }
+
+    .hero-image img {
+        border-radius: 100px 100px 0 0;
+    }
+
+    .hero-shape {
+        bottom: -80px;
+    }
+
+    .story-section,
+    .choose-section {
+        padding: 65px 0;
+    }
+
+    .story-container,
+    .choose-container {
+        grid-template-columns: 1fr;
+        width: 88%;
+        gap: 35px;
+    }
+
+    .story-image {
+        height: 280px;
+    }
+
+    .story-content h2,
+    .choose-content h2 {
+        font-size: 2rem;
+    }
+
+    .mission-section {
+        padding: 60px 0;
+    }
+
+    .mission-container {
+        width: 88%;
+    }
+
+    .mission-content {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .mission-box {
+        padding: 10px 5px;
+    }
+
+    .mission-box + .mission-box {
+        border-left: none;
+        border-top: 2px solid #1686ff;
+        padding-top: 30px;
+    }
+
+    .mission-image {
+        height: 260px;
+    }
+
+    .choose-image {
+        height: 280px;
+        border-radius: 20px 70px 20px 20px;
+    }
+
+    .about-cta {
+        width: 88%;
+        grid-template-columns: 1fr;
+        margin-bottom: 40px;
+    }
+
+    .cta-content {
+        padding: 35px 25px;
+    }
+
+    .cta-image {
+        height: 230px;
+        min-height: 230px;
+    }
+
+}
+
+
+/* SMALL PHONES */
+
+@media (max-width: 380px) {
+
+    .herotext h1 {
+        font-size: 2.3rem;
+    }
+
+    .hero-image {
+        height: 320px;
+    }
+
+    .story-content h2,
+    .choose-content h2 {
+        font-size: 1.7rem;
+    }
+
+    .cta-content h2 {
+        font-size: 1.7rem;
+    }
+
+}

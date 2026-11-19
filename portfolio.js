@@ -28,7 +28,7 @@ const observer = new IntersectionObserver((entries) => {
             entry.target.classList.add("active");
         }
         else {
-            entry.target.classList.remove("active");
+            return;
         }
 
     });
@@ -44,3 +44,9 @@ services.forEach(service => {
 
 
 
+let headingedit;
+
+document.getElementById("upload").onclick = function(){
+headingedit = document.getElementById("h2").value;
+document.getElementById("heading").textContent= headingedit
+}

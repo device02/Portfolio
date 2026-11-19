@@ -18,6 +18,8 @@ header{
     justify-content: space-between;
     padding: 1rem 1rem;
     align-items: center;
+    position:fixed;
+    z-index: 1006;
     
 
 
@@ -43,9 +45,7 @@ header{
 }
 .topnav{
     display: flex;
-    align-items: center;
     gap: 1.5rem;
-    background-color:rgba(18, 14, 58, 0.3);
      padding: 1rem 1rem;
     border-radius: 2rem;
      opacity: 0;
@@ -143,7 +143,16 @@ header{
 .herocontainer{
     width: 100%;
     background: linear-gradient(to right, #13142a, #170e4b);
+ 
 }
+   .herocontent{
+    text-align: center;
+    width: 50rem;
+    max-width: 100%;
+    padding:2rem;
+
+} 
+
 .hero{
     padding: 2rem;
     display: flex;
@@ -151,7 +160,7 @@ header{
     align-items: center;
     color: white;
     font-size: 1.5rem;
-    
+    z-index: 1000;
     animation: fade 5s ease-in;
 }
 @keyframes fade {
@@ -169,13 +178,7 @@ header{
     margin-bottom: 4rem;
     margin-top: 4rem;
 }
-.herocontent{
-    text-align: center;
-    width: 50rem;
-    max-width: 100%;
-    padding:2rem;
-
-}   
+  
 .hero img{
     
     max-width: 40rem;
@@ -212,6 +215,9 @@ header{
 .explorebtn:hover{
     transform: scale(1.1);
     box-shadow: 0px 0px 20px #6b56e3;
+    transform: translateY(-10px);
+        
+
 }
 
 .qualitypointscontainer{
@@ -258,7 +264,7 @@ text-align: center;
     background: rgb(215, 221, 234);
     align-items: center;
     text-align: center;
-    padding: 4rem;
+    padding: 4rem ;
 }
 
 
@@ -271,11 +277,15 @@ text-align: center;
     justify-content: center;
    
 }
-.whycard h1{
+.whycard h3{
     color: linear-gradient(to right, #e7e6ec, #9c5eff);
+    font-size: 1rem;
+}
+.whycard p{
+    font-size: 0.8rem;
 }
 .whycard{
-    width: 15rem;
+    width: 12rem;
     max-width: 100%;
     justify-content: space-between;
     align-items: center;
@@ -285,7 +295,7 @@ text-align: center;
     border-radius: 1rem;
     display: flex;
     flex-direction: column;
-    gap:2rem;
+    gap:1.5rem;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
     transition: all 0.5s ease-in-out;
     
@@ -295,6 +305,8 @@ text-align: center;
     transform: scale(1.2);
 }
 .howcard{
+    width: 9rem;
+    max-width: 100%;
     margin-top: 2rem;
     display: flex;
     flex-direction: column;
@@ -307,7 +319,7 @@ text-align: center;
         rgba(25, 33, 64, 0.8),
         rgba(99, 102, 241, 0.6)
     );
-    
+    font-size: 16px;
     padding: 1rem 1.5rem;
     border-radius: 50px;
     color: white;
@@ -316,6 +328,8 @@ text-align: center;
 
 .howcard h3{
     margin-bottom: 1rem;
+        font-size: 16px;
+
 }
 
 .howcard p{
@@ -332,7 +346,7 @@ text-align: center;
     flex-direction: column;
     gap:2rem;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-
+    font-size: 14px;
 }
 
 .servicecontainer img{
@@ -435,7 +449,7 @@ text-align: center;
     flex-direction: column;
     gap: 2rem;
     border:solid white;
-    padding: 2rem;
+    padding: 1.5rem;
     border-radius: 0.5rem;
     height: 30rem;
     
@@ -458,7 +472,7 @@ text-align: center;
 .contactform{
     display: flex;
     flex-wrap: wrap;
-    max-width: 44rem;
+    max-width: 43rem;
     width: 100%;
     gap: 2rem;
     
@@ -732,7 +746,7 @@ text-align: center;
 .footer-column p{
 
     line-height:1.8;
-
+    font-size: 14px;
     margin-bottom:12px;
 
 }
@@ -754,7 +768,7 @@ text-align: center;
     text-decoration:none;
 
     color:#cfcfcf;
-
+    font-size: 14px;
     transition:.3s;
 
 }
@@ -1351,31 +1365,33 @@ body {
 .topnav{
    opacity:0;
     position:absolute;
-    top:15%;
+    top:14.5%;
     right:0;
-    width:40%;
-   background:rgb(8, 17, 141);
+    width:100%;
+    background: linear-gradient(to right, #15173f, #160382);
     display:flex;
     flex-direction:column;
-    align-items:center;
-    gap:1.5rem;
-    padding:2rem 0;
+align-items: left;    
+gap:1.5rem;
+    padding:2rem ;
     transform:translateY(-30px);
     border-radius: 0 ;
     visibility:hidden;
     transition:.4s ease;
     box-shadow:0 5px 15px rgba(0,0,0,.15);
      z-index:1001;
-
+     gap: 2rem;
+     text-align: left;
+    text-transform: uppercase;
 }
 .topnav a{
-    font-size: 14px;
-    width: 14rem;
+    font-size: 16px;
     
+     
 }
 .topnav a.active{
     background:none;
-    color: black;
+    color:greenyellow;
 }
 .topnav.show{
     transform:translateY(0);
