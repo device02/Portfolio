@@ -182,8 +182,8 @@
     <div class="testimonialcontainer">
     <div class="testimonialcard">
         <div class="oneside">
-            <!--<img src="icons/nps.png">-->
-            <img src="images/md.jpg">
+          <!--  <img src="icons/nps.png">
+            <img src="images/md.jpg">-->
         </div>
         <div >
             <p>"Double D built a stunning website for our real estate business. our online enquiries have increased significantly."</p>
@@ -194,8 +194,8 @@
     </div>
      <div class="testimonialcard">
         <div>
-            <!--<img src="icons/nps.png">-->
-            <img src="images/md.jpg">
+            <!--<img src="icons/nps.png">
+            <img src="images/md.jpg">-->
         </div>
         <div>
             <p>"The team at DoubleDevices understood our needs perfectly and delivered professional website for our gym. Highly recommendable."</p>
@@ -206,8 +206,8 @@
     </div>
     <div class="testimonialcard">
         <div>
-            <!--<img src="icons/nps.png">-->
-            <img src="images/md.jpg">
+            <!--<img src="icons/nps.png">
+            <img src="images/md.jpg">-->
         </div>
         <div>
             <p>"Our Industrial electrical sale became more organized and the website looks modern, better than what we had. Great work Double D."</p>
@@ -218,8 +218,8 @@
     </div>
     <div class="testimonialcard">
         <div>
-            <!--<img src="icons/nps.png">-->
-            <img src="images/md.jpg">
+            <!--<img src="icons/nps.png">
+            <img src="images/md.jpg">-->
         </div>
         <div>
             <p>"Professional, creative and reliable. Double Devices delivered exactly what was needed to reorganize the solar company."</p>
@@ -250,13 +250,26 @@
             </div>
         </div>
         <div class="contactcard">
-        <form class="contactform">
-            <input type="text" placeholder="Full Name" required>
-            <input type="email" placeholder="Email Address" required>
-            <input type="phone" placeholder="Phone Number" required>
-            <input type="text" placeholder="Company Name">
-            <textarea placeholder="Your Message" required></textarea>
-            <button type="submit">Send Message</button>
+        <form class="contactform" id="contactform"
+      action="https://formsubmit.co/ajax/victorukaeke@gmail.com"
+      method="POST">
+            <!-- FOR USING WEB3
+               <input type="hidden" name="access_key" value="d315d026-cf6c-4f32-96b7-4807943095a2">
+                <input type="hidden" name="subject" value="New Website Enquiry - Double D">
+        <input type="hidden" name="from_name" value="Double D Website">
+        <input type="hidden" name="_subject" value="New Website Enquiry - Double D">-->
+
+<input type="hidden" name="_template" value="table">
+
+<input type="hidden" name="_captcha" value="true">
+
+<input type="text" name="_honey" style="display:none">
+            <input type="text" name="name" placeholder="Full Name" required>
+            <input type="email" name="email" placeholder="Email Address" required>
+            <input type="tel" name="phone" placeholder="Phone Number" required>
+            <input type="text" name="company" placeholder="Company Name">
+            <textarea name="message" placeholder="Your Message" required></textarea>
+            <button type="submit" id="submitbtn">Send Message</button>
 
         </form>
         </div>
@@ -503,7 +516,7 @@
     </div>
 
 </footer>
-
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@5/dist/email.min.js"></script>
 <script src="portfolio.js"></script>
 </body>
 </html>
